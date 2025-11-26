@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="./resources/ol.css">
+        <link rel="stylesheet" href="resources/fontawesome-all.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/horsey.min.css">
+        <link rel="stylesheet" type="text/css" href="resources/ol-search-layer.min.css">
+        <link href="resources/photon-geocoder-autocomplete.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./resources/ol-layerswitcher.css">
+        <link rel="stylesheet" href="./resources/qgis2web.css">
+        <style>
+        html, body {
+            background-color: #ffffff;
+        }
+        .ol-control > * {
+            background-color: #f8f8f8!important;
+            color: #444444!important;
+            border-radius: 0px;
+        }
+        .ol-attribution a, .gcd-gl-input::placeholder, .search-layer-input-search::placeholder {
+            color: #444444!important;
+        }
+        .search-layer-input-search {
+            background-color: #f8f8f8!important;
+        }
+        .ol-control > *:focus, .ol-control >*:hover {
+            background-color: rgba(248, 248, 248, 0.7)!important;
+        } 
+        .ol-control {
+            background-color: rgba(255,255,255,.4) !important;
+            padding: 2px !important;
+        } 
+        </style>
+
+        <style>
+        html, body, #map {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+            <div id="popup" class="ol-popup">
+                <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                <div id="popup-content"></div>
+            </div>
+        </div>
+        <script src="resources/qgis2web_expressions.js"></script>
+        <script src="./resources/functions.js"></script>
+        <script src="./resources/ol.js"></script>
+        <script src="resources/horsey.min.js"></script>
+        <script src="resources/ol-search-layer.js"></script>
+        <script src="./resources/ol-layerswitcher.js"></script>
+        <script src="resources/photon-geocoder-autocomplete.min.js"></script>
+        <script src="layers/faixadominioBAreprojetadoa_1.js"></script><script src="layers/PerimetroBDNPABEIRARIOassentamento_brasil_ba_2.js"></script><script src="layers/preprojeto_PA_Beira_Rio_SIRGAS2000_3.js"></script><script src="layers/Perimetro_PABEIRARIO_4.js"></script><script src="layers/assentamentoconfrontantePABEIRARIOassentamento_brasil_ba_5.js"></script><script src="layers/confrontantesPABEIRARIOconfrontantespabeirario__sigef_brasil_ba_6.js"></script><script src="layers/FazendaMinao_parcela_7.js"></script><script src="layers/FAZENDAMORRODOTUPYParte1_parcela_8.js"></script><script src="layers/FAZENDAPIRANHAS_parcela02_9.js"></script><script src="layers/FAZENDAPIRANHAS_parcela04_10.js"></script><script src="layers/FAZENDAVALEVERDEParte2_11.js"></script><script src="layers/FAZENDAVALEVERDEParte1_12.js"></script><script src="layers/FAZENDAMORRODOTUPYParte1_vertice_13.js"></script><script src="layers/FazendaMinao_vertice_14.js"></script><script src="layers/vertices_FAZENDAVALEVERDEParte2_15.js"></script><script src="layers/vertices_FAZENDAVALEVERDEParte1_16.js"></script><script src="layers/vertices_FazendaSoSebastioParcela1_17.js"></script><script src="layers/vertices_FAZENDAGUASBELAS_18.js"></script><script src="layers/vertices_FAZENDALAGOADOCHICO_19.js"></script><script src="layers/vertices_FAZENDATRSIRMOS_20.js"></script><script src="layers/vertices_FAZENDAPIRANHAS_parcela04_21.js"></script><script src="layers/vertices_FAZENDAPIRANHAS_parcela02_22.js"></script><script src="layers/vertices_FAZENDAPIRANHAS_parcela01_23.js"></script><script src="layers/verticesFAZENDAPIRANHAS_semdesmembrar_24.js"></script><script src="layers/verticesperimetro2025_25.js"></script>
+        <script src="styles/faixadominioBAreprojetadoa_1_style.js"></script><script src="styles/PerimetroBDNPABEIRARIOassentamento_brasil_ba_2_style.js"></script><script src="styles/preprojeto_PA_Beira_Rio_SIRGAS2000_3_style.js"></script><script src="styles/Perimetro_PABEIRARIO_4_style.js"></script><script src="styles/assentamentoconfrontantePABEIRARIOassentamento_brasil_ba_5_style.js"></script><script src="styles/confrontantesPABEIRARIOconfrontantespabeirario__sigef_brasil_ba_6_style.js"></script><script src="styles/FazendaMinao_parcela_7_style.js"></script><script src="styles/FAZENDAMORRODOTUPYParte1_parcela_8_style.js"></script><script src="styles/FAZENDAPIRANHAS_parcela02_9_style.js"></script><script src="styles/FAZENDAPIRANHAS_parcela04_10_style.js"></script><script src="styles/FAZENDAVALEVERDEParte2_11_style.js"></script><script src="styles/FAZENDAVALEVERDEParte1_12_style.js"></script><script src="styles/FAZENDAMORRODOTUPYParte1_vertice_13_style.js"></script><script src="styles/FazendaMinao_vertice_14_style.js"></script><script src="styles/vertices_FAZENDAVALEVERDEParte2_15_style.js"></script><script src="styles/vertices_FAZENDAVALEVERDEParte1_16_style.js"></script><script src="styles/vertices_FazendaSoSebastioParcela1_17_style.js"></script><script src="styles/vertices_FAZENDAGUASBELAS_18_style.js"></script><script src="styles/vertices_FAZENDALAGOADOCHICO_19_style.js"></script><script src="styles/vertices_FAZENDATRSIRMOS_20_style.js"></script><script src="styles/vertices_FAZENDAPIRANHAS_parcela04_21_style.js"></script><script src="styles/vertices_FAZENDAPIRANHAS_parcela02_22_style.js"></script><script src="styles/vertices_FAZENDAPIRANHAS_parcela01_23_style.js"></script><script src="styles/verticesFAZENDAPIRANHAS_semdesmembrar_24_style.js"></script><script src="styles/verticesperimetro2025_25_style.js"></script>
+        <script src="./layers/layers.js" type="text/javascript"></script> 
+        <script src="./resources/Autolinker.min.js"></script>
+        <script src="./resources/qgis2web.js"></script>        
+    </body>
+</html>
