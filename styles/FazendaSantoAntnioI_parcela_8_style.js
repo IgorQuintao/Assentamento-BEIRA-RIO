@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_Perimetro_PABEIRARIO_4 = function(feature, resolution){
+var style_FazendaSantoAntnioI_parcela_8 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -9,7 +9,7 @@ var style_Perimetro_PABEIRARIO_4 = function(feature, resolution){
     
     var labelText = ""; 
     var value = feature.get("");
-    var labelFont = "13.0px \'Arial\', sans-serif";
+    var labelFont = "13.0px \'Open Sans\', sans-serif";
     var labelFill = "#323232";
     var bufferColor = "#fafafa";
     var bufferWidth = 3.0;
@@ -17,11 +17,11 @@ var style_Perimetro_PABEIRARIO_4 = function(feature, resolution){
     var offsetX = 0;
     var offsetY = 0;
     var placement = 'point';
-    if (feature.get("Grupo") !== null) {
-        labelText = String(feature.get("Grupo"));
+    if (feature.get("nome") !== null) {
+        labelText = String(feature.get("nome"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(227,26,28,1.0)', lineDash: [14.591999999999999,7.295999999999999], lineCap: 'square', lineJoin: 'bevel', width: 3.6479999999999997}),
+        stroke: new ol.style.Stroke({color: 'rgba(218,46,46,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 3.8}),fill: new ol.style.Fill({color: 'rgba(218,46,46,0.2)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

@@ -21,7 +21,7 @@ var style_PerimetroBDNPABEIRARIOassentamento_brasil_ba_2 = function(feature, res
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(31,120,180,1.0)', lineDash: [11.552,5.776], lineCap: 'square', lineJoin: 'bevel', width: 2.888}),
+        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: [11.552,5.776], lineCap: 'square', lineJoin: 'bevel', width: 2.888}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

@@ -4,12 +4,12 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        extent: [-4540969.223978, -1463105.034425, -4488145.856967, -1440076.025490], maxZoom: 28, minZoom: 1
+        extent: [-4542733.078016, -1460774.884046, -4491092.712418, -1440534.361987], maxZoom: 28, minZoom: 4
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([-4540969.223978, -1463105.034425, -4488145.856967, -1440076.025490], map.getSize());
+map.getView().fit([-4542733.078016, -1460774.884046, -4491092.712418, -1440534.361987], map.getSize());
 
 //full zooms only
 map.getView().setProperties({constrainResolution: true});
@@ -124,8 +124,8 @@ var featureOverlay = new ol.layer.Vector({
     updateWhileInteracting: true // optional, for instant visual feedback
 });
 
-var doHighlight = true;
-var doHover = false;
+var doHighlight = false;
+var doHover = true;
 
 function createPopupField(currentFeature, currentFeatureKeys, layer) {
     var popupText = '';
@@ -1070,8 +1070,8 @@ let measuring = false;
 //layer search
 
 var searchLayer = new SearchLayer({
-    layer: lyr_verticesperimetro2025_25,
-    colName: 'nome_ok',
+    layer: lyr_verticesextraidosODSv4vertices_extraidos_17,
+    colName: 'Vertice',
     zoom: 10,
     collapsed: true,
     map: map,
@@ -1088,22 +1088,11 @@ document.getElementsByClassName('search-layer-input-search')[0].placeholder = 'S
 //layerswitcher
 
 var layerSwitcher = new ol.control.LayerSwitcher({
-    activationMode: 'click',
-	startActive: true,
-	tipLabel: "Layers",
-    target: 'top-right-container',
-	collapseLabel: '»',
-	collapseTipLabel: 'Close'
-    });
+    tipLabel: "Layers",
+    target: 'top-right-container'
+});
 map.addControl(layerSwitcher);
-if (hasTouchScreen || isSmallScreen) {
-	document.addEventListener('DOMContentLoaded', function() {
-		setTimeout(function() {
-			layerSwitcher.hidePanel();
-		}, 500);
-	});	
-}
-
+    
 
 
 

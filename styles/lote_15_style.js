@@ -1,7 +1,7 @@
 var size = 0;
 var placement = 'point';
 
-var style_Perimetro_PABEIRARIO_4 = function(feature, resolution){
+var style_lote_15 = function(feature, resolution){
     var context = {
         feature: feature,
         variables: {}
@@ -17,11 +17,11 @@ var style_Perimetro_PABEIRARIO_4 = function(feature, resolution){
     var offsetX = 0;
     var offsetY = 0;
     var placement = 'point';
-    if (feature.get("Grupo") !== null) {
-        labelText = String(feature.get("Grupo"));
+    if (feature.get("Descricao") !== null && resolution > 0 && resolution < 7) {
+        labelText = String(feature.get("Descricao"));
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(227,26,28,1.0)', lineDash: [14.591999999999999,7.295999999999999], lineCap: 'square', lineJoin: 'bevel', width: 3.6479999999999997}),
+        stroke: new ol.style.Stroke({color: 'rgba(0,0,0,1.0)', lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1.748}),fill: new ol.style.Fill({color: 'rgba(134,96,55,0.9568627450980393)'}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)

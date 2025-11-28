@@ -21,7 +21,7 @@ var style_preprojeto_PA_Beira_Rio_SIRGAS2000_3 = function(feature, resolution){
         labelText = String("");
     }
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: 'rgba(228,26,28,1.0)', lineDash: [11.552,5.776], lineCap: 'square', lineJoin: 'bevel', width: 2.888}),
+        stroke: new ol.style.Stroke({color: 'rgba(31,120,180,1.0)', lineDash: [11.552,5.776], lineCap: 'square', lineJoin: 'bevel', width: 2.888}),
         text: createTextStyle(feature, resolution, labelText, labelFont,
                               labelFill, placement, bufferColor,
                               bufferWidth)
